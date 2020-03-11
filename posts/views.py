@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Post
 
+
 def mostrar_formulario(request):
     if request.method == 'POST':
         post = Post()
@@ -12,6 +13,7 @@ def mostrar_formulario(request):
         return redirect('/')
 
     return render(request, 'form.html')
+
 
 def mostrar_home(request):
     posts = Post.objects.all()

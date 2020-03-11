@@ -1,6 +1,7 @@
 from django.test import TestCase
 from posts.models import Post
 
+
 class ViewTestCase(TestCase):
     def test_mostrar_home(self):
         response = self.client.get('/')
